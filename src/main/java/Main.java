@@ -36,10 +36,10 @@ public class Main {
 
   //    females.forEach(System.out::println);
 
-    // Sort
-   // List<Person>
+    // Sort (by age)
+    List<Person> sortedByAge = people.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
 
-//    sorted.forEach(System.out::println);
+   // sortedByAge .forEach(System.out::println);
 
     // All match
     boolean allMatch = people.stream()
