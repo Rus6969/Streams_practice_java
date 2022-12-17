@@ -1,3 +1,5 @@
+package streamsExamples;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -14,11 +16,11 @@ public class Main {
 
     /*
 
-    List<Person> females = new ArrayList<>();
+    List<streamsExamples.Person> females = new ArrayList<>();
 
-    for (Person person : people) {
+    for (streamsExamples.Person person : people) {
 
-      if (person.getGender().equals(Gender.FEMALE)) {
+      if (person.getGender().equals(streamsExamples.Gender.FEMALE)) {
         females.add(person);
       }
     }
@@ -66,7 +68,7 @@ If the stream is empty, then an empty Optional is returned.
 If the largest value returned is null, then NullPointerException is thrown.
 The max method is a terminal operation.
      */
-    //Optional<Person> retunOptional =
+    //Optional<streamsExamples.Person> retunOptional =
       people.stream().max(Comparator.comparing(Person::getAge));
 //        .ifPresent(System.out::println);
 

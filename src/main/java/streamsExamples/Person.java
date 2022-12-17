@@ -1,3 +1,5 @@
+package streamsExamples;
+
 public class Person {
 
   private final String name;
@@ -27,7 +29,7 @@ public class Person {
 
   @Override
   public String toString() {
-    return "Person{" +
+    return "streamsExamples.Person{" +
         "name='" + name + '\'' +
         ", age=" + age +
         ", gender=" + gender +
