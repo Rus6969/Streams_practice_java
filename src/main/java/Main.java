@@ -43,7 +43,7 @@ public class Main {
 
     // All match
     boolean allMatch = people.stream()
-        .allMatch(person -> person.getAge() > 8);
+            .allMatch(person -> person.getAge()>18);
 
 //    System.out.println(allMatch);
     // Any match
@@ -58,8 +58,16 @@ public class Main {
 //    System.out.println(noneMatch);
 
     // Max
-    people.stream()
-        .max(Comparator.comparing(Person::getAge));
+    /*
+     max returns optional class because :
+     The Stream max() method will return an Optional that contains the largest value of the stream. The largest values are evaluated based on the passed Comparator argument.
+
+If the stream is empty, then an empty Optional is returned.
+If the largest value returned is null, then NullPointerException is thrown.
+The max method is a terminal operation.
+     */
+    //Optional<Person> retunOptional =
+      people.stream().max(Comparator.comparing(Person::getAge));
 //        .ifPresent(System.out::println);
 
     // Min
