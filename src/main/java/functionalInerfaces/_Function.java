@@ -23,6 +23,7 @@ public class _Function {
 
 
     // those  to methods are same, imperative approach
+
     static int increment(int number) {
         return number + 1;
     }
@@ -34,7 +35,6 @@ public class _Function {
 
 
     //  And(then) is used to combine 2 functions togather in one method
-
 
     static Function<Integer, Integer> addBy1andMultiplyByTen = increment_Fuctional_Interface.andThen(MultiplyBy10_Fuctional_Interface);
 }
