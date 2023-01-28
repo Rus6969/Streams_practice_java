@@ -95,7 +95,39 @@ The max method is a terminal operation.
         .map(Person::getName);
 
     oldestFemaleAge.ifPresent(System.out::println);
+
+    System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!group by gender !!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    // sout with streams , we anw get all genders
+    Map<Gender, List<Person>> groupByGender1 = people.stream()
+            .collect(Collectors.groupingBy(Person::getGender));
+    System.out.println(groupByGender1);
+
+    System.out.println("Names:***************************");
+    System.out.println(people.stream().map(person -> person.getName()).collect(Collectors.toList()));
+
+    System.out.println("transform name to int length ");
+    people.stream().map(person -> person.getName())
+
+            .mapToInt(name-> name.length())
+            //or
+            //.mapToInt(String::length)
+            .forEach(System.out::println);
+
+    // all match since its predicate returns boolean
+    System.out.println(people.stream().allMatch(person -> person.getGender().equals("FEMALE")));
+
+
+    System.out.println("OPTIONALS ********************->>>>>>>");
+
+
+
+
   }
+
+
+
+
+
 
   private static List<Person> getPeople() {
     return List.of(

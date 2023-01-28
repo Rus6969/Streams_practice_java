@@ -3,7 +3,7 @@ package streamsExamples;
 public class Person {
 
   private final String name;
-  private final int age ;
+  private int age = 0;
   private final Gender gender;
 
   @Override
