@@ -6,14 +6,14 @@ public class Person {
   private final int age;
   private final Gender gender;
 
-  public Person(String name, int age, Gender gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+  @Override
+  public String toString() {
+    return "Person{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", gender=" + gender +
+            '}';
   }
-
-
-
 
   public String getName() {
     return name;
@@ -27,12 +27,9 @@ public class Person {
     return gender;
   }
 
-  @Override
-  public String toString() {
-    return "streamsExamples.Person{" +
-        "name='" + name + '\'' +
-        ", age=" + age +
-        ", gender=" + gender +
-        '}';
+  public Person(String name, Gender gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
   }
 }

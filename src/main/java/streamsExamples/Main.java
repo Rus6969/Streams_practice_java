@@ -1,6 +1,5 @@
 package streamsExamples;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -97,13 +96,13 @@ The max method is a terminal operation.
 
   private static List<Person> getPeople() {
     return List.of(
-        new Person("Antonio", 20, Gender.MALE),
-        new Person("Alina Smith", 33, Gender.FEMALE),
-        new Person("Helen White", 57, Gender.FEMALE),
-        new Person("Alex Boz", 14, Gender.MALE),
-        new Person("Jamie Goa", 99, Gender.MALE),
-        new Person("Anna Cook", 7, Gender.FEMALE),
-        new Person("Zelda Brown", 120, Gender.FEMALE)
+        new Person("Antonio", Gender.MALE),
+        new Person("Alina Smith", Gender.FEMALE),
+        new Person("Helen White", Gender.FEMALE),
+        new Person("Alex Boz", Gender.MALE),
+        new Person("Jamie Goa", Gender.MALE),
+        new Person("Anna Cook", Gender.FEMALE),
+        new Person("Zelda Brown", Gender.FEMALE)
     );
   }
 

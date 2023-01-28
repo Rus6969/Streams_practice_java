@@ -2,7 +2,7 @@ package functionalInerfaces;
 
 import java.util.function.Predicate;
 
-// Boolean valued functions with one argument
+// Boolean valued functions with one argument, same Bipedicates uses with additional argument
 public class _Predicate {
     public static void main(String[] args) {
         System.out.println(isPhoneNumberValid("07000000000"));
@@ -11,8 +11,9 @@ public class _Predicate {
 
         System.out.println(isValidPredicate.test("07985"));
         System.out.println("************Combined_Predicates****************");
-        // predicates can be combined
+        // predicates can be combined/ OR logic as well
         System.out.println(isValidPredicate.and(containNumber3).test("07030000000"));
+        System.out.println(isValidPredicate.or(containNumber3).test("07030000000"));
     }
 
 
