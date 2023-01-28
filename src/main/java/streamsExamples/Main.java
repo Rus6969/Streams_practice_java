@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static streamsExamples.Gender.FEMALE;
+import static streamsExamples.Gender.MALE;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -33,7 +36,7 @@ public class Main {
     // Filter
     List<Person> females = people
             .stream()
-            .filter(person -> person.getGender().equals(Gender.FEMALE)).collect(Collectors.toList());
+            .filter(person -> person.getGender().equals(FEMALE)).collect(Collectors.toList());
 
   //    females.forEach(System.out::println);
 
@@ -87,7 +90,7 @@ The max method is a terminal operation.
 //    });
 
     Optional<String> oldestFemaleAge = people.stream()
-        .filter(person -> person.getGender().equals(Gender.FEMALE))
+        .filter(person -> person.getGender().equals(FEMALE))
         .max(Comparator.comparing(Person::getAge))
         .map(Person::getName);
 
@@ -96,13 +99,13 @@ The max method is a terminal operation.
 
   private static List<Person> getPeople() {
     return List.of(
-        new Person("Antonio", Gender.MALE),
-        new Person("Alina Smith", Gender.FEMALE),
-        new Person("Helen White", Gender.FEMALE),
-        new Person("Alex Boz", Gender.MALE),
-        new Person("Jamie Goa", Gender.MALE),
-        new Person("Anna Cook", Gender.FEMALE),
-        new Person("Zelda Brown", Gender.FEMALE)
+        new Person("Antonio", MALE),
+        new Person("Alina Smith", FEMALE),
+        new Person("Helen White", FEMALE),
+        new Person("Alex Boz", MALE),
+        new Person("Jamie Goa", MALE),
+        new Person("Anna Cook", FEMALE),
+        new Person("Zelda Brown", FEMALE)
     );
   }
 
