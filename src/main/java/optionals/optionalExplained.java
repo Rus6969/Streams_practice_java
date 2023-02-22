@@ -9,6 +9,7 @@ public class optionalExplained {
   The class was introduced in the java.util package to remove the need for multiple null checks to protect against
   the dreaded NullPointerExceptions during run-time.
    */
+
         Optional<Object> empty = Optional.empty();// will return empty
         // uncomment me for nullable tests
         Optional<String> hello1 = Optional.ofNullable("Hello");
