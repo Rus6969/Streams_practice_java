@@ -19,5 +19,5 @@ Streams tutorial with examples how to use in work environment
   ニニニニニ
 - Higher Order Functions
   ニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニニ
-*The function takes one or more functions as parameters.
+*`The function takes one or more functions as parameters.
 *The function returns another function as result.
